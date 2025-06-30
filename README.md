@@ -73,7 +73,7 @@ Models were compared using:
 
 **OLS Regression Analysis**
 
-![alt text](figures\ols_regression_result.png)
+![OLS Regression Result](figures/ols_regression_result.png)
 
 **Key Insights:**
 
@@ -114,7 +114,7 @@ To visualize the impact of including holiday features in forecasting, we compare
 
 1. **Without Holidays**
    
-![alt text](figures\result_without_holidays.png)
+![Without Holiday](figures/result_without_holidays.png)
 
 - When holidays were excluded, both models failed to accurately predict sharp peaks and troughs.
 
@@ -124,7 +124,7 @@ To visualize the impact of including holiday features in forecasting, we compare
 
 2. **With Holidays**
    
-![alt text](figures\result_with_holidays.png)
+![With Holiday](figures/result_with_holidays.png)
 
 - Both Prophet and SARIMA models that included holiday variables followed the spikes and dips in actual sales more closely.
 
