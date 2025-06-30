@@ -1,5 +1,13 @@
 # Rossmann Holiday vs Non-Holiday Forecasting
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Last Commit](https://img.shields.io/github/last-commit/zaqimegantara/rossmann-holiday-vs-nonholiday-forecast)](https://github.com/zaqimegantara/rossmann-holiday-vs-nonholiday-forecast/commits/main)
+![Time Series](https://img.shields.io/badge/focus-Time%20Series%20Forecasting-ff69b4)
+![Model](https://img.shields.io/badge/model-Prophet-blueviolet)
+![Model](https://img.shields.io/badge/model-SARIMA-darkgreen)
+
+
 This project investigates how holidays impact daily sales forecasts at Rossmann stores by comparing model performance with and without holiday features. The first step is to determine whether holidays significantly affect sales using Ordinary Least Squares (OLS) regression. If a significant impact is found, the next step is to evaluate whether incorporating holiday information improves forecasting accuracy. To do this, forecasting results from models that include holiday variables are compared against those that do not, using two popular time series models: Prophet and SARIMA.
 
 ---
@@ -65,7 +73,7 @@ Models were compared using:
 
 **OLS Regression Analysis**
 
-![alt text](ols_regression_result.png)
+![alt text](figures\ols_regression_result.png)
 
 **Key Insights:**
 
@@ -106,7 +114,7 @@ To visualize the impact of including holiday features in forecasting, we compare
 
 1. **Without Holidays**
    
-![alt text](result_without_holidays.png)
+![alt text](figures\result_without_holidays.png)
 
 - When holidays were excluded, both models failed to accurately predict sharp peaks and troughs.
 
@@ -116,7 +124,7 @@ To visualize the impact of including holiday features in forecasting, we compare
 
 2. **With Holidays**
    
-![alt text](result_with_holidays.png)
+![alt text](figures\result_with_holidays.png)
 
 - Both Prophet and SARIMA models that included holiday variables followed the spikes and dips in actual sales more closely.
 
@@ -170,22 +178,30 @@ Run these in order:
 ## Project Structure
 ```
 ├── data/
-│ └── train.csv # Raw sales data
+│   └── train.csv                   # Raw dataset
 │
 ├── notebooks/
-│ ├── 01_regression_holiday_impact.ipynb # OLS regression analysis
-│ └── 02_modeling_prophet_sarima.ipynb # Forecasting with Prophet and SARIMA
+│   ├── 01_regression_holiday_impact.ipynb
+│   └── 02_modeling_prophet_sarima.ipynb
 │
-├── ols_regression_result.png # Regression summary image
-├── result_with_holidays.png # Forecast visualization (with holidays)
-├── result_without_holidays.png # Forecast visualization (without holidays)
+├── figures/
+│   ├── ols_regression_result.png              # Regression summary image
+│   ├── result_with_holidays.png               # Forecast visualization (with holidays)
+│   ├── result_without_holidays.png            # Forecast visualization (without holidays)
 │
-├── requirements.txt # Dependencies list
-└── README.md # Project overview and instructions
+├── requirements.txt               # Dependencies
+├── LICENSE                        # MIT License
+└── README.md                      # You're here!
+
 ```
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [MIT License](./LICENSE) – feel free to use, modify, and share.
+
+## Acknowledgments
+- [Rossmann Sales Competition – Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales)
+- [Prophet by Meta](https://facebook.github.io/prophet/)
+- [statsmodels SARIMAX](https://www.statsmodels.org/stable/index.html)
 
 
 
